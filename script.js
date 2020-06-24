@@ -1,9 +1,9 @@
-var csn = document.getElementsByTagName("h3");
+var csn = document.querySelector("h3");
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
 var body = document.getElementById("gradient");
 
-var start = function setGradient() {
+function setGradient() {
 	body.style.background =
 		"linear-gradient(to right, "
 		+ color1.value
@@ -11,10 +11,8 @@ var start = function setGradient() {
 		+ color2.value
 		+ ")";
 
-	csn.textContent = body.style.background + 'current';
+	csn.textContent = body.style.background + ";";
 }
-
-windows.oncload = start
 
 color1.addEventListener("input", setGradient);
 
